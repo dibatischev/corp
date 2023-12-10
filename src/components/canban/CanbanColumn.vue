@@ -2,7 +2,7 @@
     <div class="CollumnWrapper">
         <CanbanCard v-for="i in tasks" v-bind:key="i.id" v-bind:OrderStatus="i.OrderStatus" v-bind:OrderNum="i.orderNum"
             v-bind:OrderCompany="i.OrderCompany" v-bind:OrderSummary="i.OrderSummary" v-bind:OrderDate="i.orderDate"
-            v-bind:OrderStatusType="i.OrderStatusType" draggable @dragstart="startDrag($event,i)"></CanbanCard>
+            v-bind:OrderStatusType="i.OrderStatusType" draggable="true" @dragstart="startDrag($event,i)"></CanbanCard>
     </div>
 </template>
 <script setup>
@@ -17,13 +17,10 @@ function startDrag(evt,item){
     evt.dataTransfer.dropEffect = 'move'
     evt.dataTransfer.effectAllowed = 'move'
     evt.dataTransfer.setData('itemID',item.id)
+    console.log(item.id)
 }
 
-function onDrop(evt,list){
-    const itemID = evt.dataTransfer.getData('itemID')
-    const item = tasks.find((item) => item.id == itemID)
-    item.type = list
-}
+
 
 </script>
 <style  lang="scss" scoped>
