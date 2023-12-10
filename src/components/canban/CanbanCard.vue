@@ -9,7 +9,7 @@
             </div>
         </div>
         <div class="CanbanCardFooter">
-    
+
             <div class="StatusText StatusText__red" v-if="OrderStatusType === 1">{{ OrderStatus }}</div>
             <div class="StatusText StatusText__green" v-if="OrderStatusType === 2">{{ OrderStatus }}</div>
             <div class="StatusText StatusText__orange" v-if="OrderStatusType === 3">{{ OrderStatus }}</div>
@@ -29,14 +29,14 @@ const props = defineProps({
     OrderSummary: Number,
     OrderStatus: String,
     OrderStatusType: Number,
-    OrderDate:String
+    OrderDate: String
 
 })
 
-function startDrag(evt,item){
+function startDrag(evt, item) {
     evt.dataTransfer.dropEffect = 'move'
     evt.dataTransfer.effectAllowed = 'move'
-    evt.dataTransfer.setData('itemTYPE',item.type)
+    evt.dataTransfer.setData('itemTYPE', item.type)
 }
 </script>
 <style lang="scss" scoped>
@@ -66,7 +66,7 @@ function startDrag(evt,item){
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
-    color: #0C0C0D; 
+    color: #0C0C0D;
 }
 
 .boldTxt {
@@ -74,7 +74,7 @@ function startDrag(evt,item){
     font-style: normal;
     font-weight: 500;
     line-height: 130%;
-    color: #0C0C0D; 
+    color: #0C0C0D;
 }
 
 .CanbanCardCont {
@@ -91,16 +91,16 @@ function startDrag(evt,item){
 .StatusText {
     margin-left: 16px;
 
-    &__green{
-        color:$accent-lightgreen;
+    &__green {
+        color: $accent-lightgreen;
     }
 
-    &__orange{
+    &__orange {
         color: $accent-orange;
     }
 
-    &__red{
-        color:$accent-red;
+    &__red {
+        color: $accent-red;
     }
 }
 

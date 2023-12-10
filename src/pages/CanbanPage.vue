@@ -3,11 +3,16 @@
 
     </StatusBar>
     <div class="TableCont">
-        <CanbanColumn v-bind:tasks="listOne"></CanbanColumn>
-        <CanbanColumn v-bind:tasks="listTwo"></CanbanColumn>
-        <CanbanColumn v-bind:tasks="listThree"></CanbanColumn>
-        <CanbanColumn v-bind:tasks="listFour"></CanbanColumn>
-        <CanbanColumn v-bind:tasks="listFive"></CanbanColumn>
+        <CanbanColumn v-bind:tasks="getTypes(1)" @drop="onDrop($event, 1)" @dragenter.prevent @dragover.prevent>
+        </CanbanColumn>
+        <CanbanColumn v-bind:tasks="getTypes(2)" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
+        </CanbanColumn>
+        <CanbanColumn v-bind:tasks="getTypes(3)" @drop="onDrop($event, 3)" @dragenter.prevent @dragover.prevent>
+        </CanbanColumn>
+        <CanbanColumn v-bind:tasks="getTypes(4)" @drop="onDrop($event, 4)" @dragenter.prevent @dragover.prevent>
+        </CanbanColumn>
+        <CanbanColumn v-bind:tasks="getTypes(5)" @drop="onDrop($event, 5)" @dragenter.prevent @dragover.prevent>
+        </CanbanColumn>
     </div>
 </template>
 
@@ -26,16 +31,18 @@ import StatusBar from '@/components/canban/StatusBar.vue';
 import CanbanColumn from '@/components/canban/CanbanColumn.vue';
 import { useCanbanStore } from '@/stores/canbanStore';
 const caban = useCanbanStore()
-const listOne = ref([]);
-listOne.value = caban.data.filter(item => item.type === 1);
-console.log(listOne.value)
-const listTwo = ref([]);
-listTwo.value = caban.data.filter(item => item.type === 2);
-const listThree = ref([]);
-listThree.value = caban.data.filter(item => item.type === 3);
-const listFour = ref([]);
-listFour.value = caban.data.filter(item => item.type === 4);
-const listFive = ref([]);
-listFive.value = caban.data.filter(item => item.type === 5);
+const getTypes = (type) => {
+    return caban.data.filter((item) => item.type == type)
+}
+function onDrop(evt, type) {
+    const itemID = evt.dataTransfer.getData('itemID');
+    console.log(itemID)
+    // const item = tasks.find((item) => item.id == itemID)
+    const item = caban.data.find((item) => item.id == itemID)
+    console.log(item)
+    // item.type = list
+    item.type = type
+    console.log(item.type)
+}
 
 </script>
