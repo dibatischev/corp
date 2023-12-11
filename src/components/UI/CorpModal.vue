@@ -8,6 +8,7 @@
 </template>
 <style lang="scss" scoped>
 .modalWrapper {
+    background: $wrapper;
     width: 1600px;
     height: 900px;
     position: fixed;
@@ -18,5 +19,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.modalWindow{
+    border-radius: 12px;
+    position: absolute;
+    top: 120px;
+    left:498px;
+    background:#fff;
+    width:876px;
+    padding: 24px;
 }
 </style>
