@@ -1,6 +1,5 @@
 import {
-    ref,
-    computed
+    ref
 } from 'vue';
 import {
     defineStore
@@ -147,7 +146,7 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 3
         }
 
     ])

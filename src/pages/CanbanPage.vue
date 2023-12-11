@@ -26,7 +26,6 @@
 </style>
 
 <script setup>
-import { ref } from 'vue';
 import StatusBar from '@/components/canban/StatusBar.vue';
 import CanbanColumn from '@/components/canban/CanbanColumn.vue';
 import { useCanbanStore } from '@/stores/canbanStore';
