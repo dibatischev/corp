@@ -14,6 +14,7 @@
         <CanbanColumn v-bind:tasks="getTypes(5)" @drop="onDrop($event, 5)" @dragenter.prevent @dragover.prevent>
         </CanbanColumn>
     </div>
+    <FilterModal></FilterModal>
 </template>
 
 <style lang="scss" scoped>
@@ -26,7 +27,7 @@
 </style>
 
 <script setup>
-import { ref } from 'vue';
+import FilterModal from '@/components/canban/FilterModal.vue';
 import StatusBar from '@/components/canban/StatusBar.vue';
 import CanbanColumn from '@/components/canban/CanbanColumn.vue';
 import { useCanbanStore } from '@/stores/canbanStore';

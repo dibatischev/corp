@@ -33,11 +33,7 @@ const props = defineProps({
 
 })
 
-function startDrag(evt, item) {
-    evt.dataTransfer.dropEffect = 'move'
-    evt.dataTransfer.effectAllowed = 'move'
-    evt.dataTransfer.setData('itemTYPE', item.type)
-}
+
 </script>
 <style lang="scss" scoped>
 .CardWrapper {
@@ -50,6 +46,7 @@ function startDrag(evt, item) {
     flex-shrink: 0;
     border-radius: 8px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.12);
+    cursor:grab;
 
 }
 
