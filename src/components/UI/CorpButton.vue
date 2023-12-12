@@ -27,6 +27,7 @@ const props = defineProps({
     gap: 6px;
     background: $accent-dark;
     align-items: center;
+    cursor:pointer;
     justify-content: center;
 }
 .whiteTxt{

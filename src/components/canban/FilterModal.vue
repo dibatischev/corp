@@ -8,22 +8,24 @@
                         stroke-linejoin="round" />
                 </svg>
             </div>
-            <CorpButton v-bind:name="'Добавить фильтр'" v-bind:type="'add'">
-            </CorpButton>
+           <div class="midCont">
+            <FilterLeft></FilterLeft>
+           </div>
         </div>
     </CorpModal>
 </template>
 
 <script setup>
+import FilterLeft from './FilterLeft.vue';
 import CorpModal from '../UI/CorpModal.vue';
-import CorpButton from '../UI/CorpButton.vue';
+
 </script>
 
 <style lang="scss" scoped>
 .head {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid;
+    border-bottom: 1px solid $accent-gray;
 }
 
 .blackTxt {

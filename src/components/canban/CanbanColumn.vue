@@ -6,7 +6,7 @@
     </div>
 </template>
 <script setup>
-import { defineProps, ref } from 'vue';
+import { defineProps} from 'vue';
 import CanbanCard from './CanbanCard.vue';
 
 const props = defineProps({
