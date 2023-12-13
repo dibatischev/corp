@@ -10,7 +10,7 @@
             </div>
            <div class="midCont">
             <FilterLeft style="width: 35%;"></FilterLeft>
-            <FilterRight style="width: 65%;">   </FilterRight>
+            <FilterRight style="width: 65%;" v-bind:fields="caban.filters[0].fields">   </FilterRight>
            </div>
         </div>
     </CorpModal>
@@ -20,7 +20,9 @@
 import FilterLeft from './FilterLeft.vue';
 import CorpModal from '../UI/CorpModal.vue';
 import FilterRight from './FilterRight.vue';
+import { useCanbanStore } from '@/stores/canbanStore';
 
+const caban = useCanbanStore()
 </script>
 
 <style lang="scss" scoped>

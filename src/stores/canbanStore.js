@@ -6,6 +6,9 @@ import {
 } from 'pinia';
 
 export const useCanbanStore = defineStore('canban', () => {
+    
+    const globalFilter = ref(0)
+    
     const data = ref([
 
         {
@@ -174,7 +177,32 @@ export const useCanbanStore = defineStore('canban', () => {
         {id:3, name:'Реквизиты'},
         {id:4, name:'СБП'},
     ])
+
+    const filters = ref([
+        {
+            id:1,name:'Фильтр 1',fields:[
+                {id:1,name:'Статус',data:[
+                    {id:1,name:'status1'},
+                    {id:2,name:'status2'},
+                    {id:3,name:'status3'},
+                    {id:4,name:'status4'},
+                ]},
+                {id:2,name:'Компания',data:[
+                    {id:'1',name:'some company 1'},
+                    {id:'2',name:'some company 2'},
+                    {id:'3',name:'some company 3'},
+                    {id:'4',name:'some company 4'}
+                ]},
+                {id:3,name:'Payment', data:[
+                    {id:1,name:'card'},
+                    {id:1,name:'cash'},
+                    {id:1,name:'requisite'},
+                    {id:1,name:'sbp'},
+                ]}
+            ]
+        }
+    ])
     return {
-        data,statuses,companies,payments
+        data,statuses,companies,payments,globalFilter,filters
     }
 })

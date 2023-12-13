@@ -2,7 +2,21 @@
     <StatusBar style="margin-top: 16px;margin-left: 16px;">
 
     </StatusBar>
-    <div class="TableCont">
+    <div class="TableCont" v-if="glFil == 1">
+        
+            <CanbanColumn v-bind:tasks="getTypes(1)" @drop="onDrop($event, 1)" @dragenter.prevent @dragover.prevent>
+            </CanbanColumn>
+            <CanbanColumn v-bind:tasks="getTypes(2)" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
+            </CanbanColumn>
+            <CanbanColumn v-bind:tasks="getTypes(3)" @drop="onDrop($event, 3)" @dragenter.prevent @dragover.prevent>
+            </CanbanColumn>
+            <CanbanColumn v-bind:tasks="getTypes(4)" @drop="onDrop($event, 4)" @dragenter.prevent @dragover.prevent>
+            </CanbanColumn>
+            <CanbanColumn v-bind:tasks="getTypes(5)" @drop="onDrop($event, 5)" @dragenter.prevent @dragover.prevent>
+            </CanbanColumn>
+    </div>
+    <div class="TableCont" v-else>
+        
         <CanbanColumn v-bind:tasks="getTypes(1)" @drop="onDrop($event, 1)" @dragenter.prevent @dragover.prevent>
         </CanbanColumn>
         <CanbanColumn v-bind:tasks="getTypes(2)" @drop="onDrop($event, 2)" @dragenter.prevent @dragover.prevent>
@@ -13,8 +27,9 @@
         </CanbanColumn>
         <CanbanColumn v-bind:tasks="getTypes(5)" @drop="onDrop($event, 5)" @dragenter.prevent @dragover.prevent>
         </CanbanColumn>
-    </div>
-    <FilterModal></FilterModal>
+</div>
+    
+    <FilterModal ></FilterModal>
 </template>
 
 <style lang="scss" scoped>
@@ -31,10 +46,12 @@ import FilterModal from '@/components/canban/FilterModal.vue';
 import StatusBar from '@/components/canban/StatusBar.vue';
 import CanbanColumn from '@/components/canban/CanbanColumn.vue';
 import { useCanbanStore } from '@/stores/canbanStore';
+
 const caban = useCanbanStore()
 const getTypes = (type) => {
     return caban.data.filter((item) => item.type == type)
 }
+const glFil = caban.globalFilter;
 function onDrop(evt, type) {
     const itemID = evt.dataTransfer.getData('itemID');
     console.log(itemID)
