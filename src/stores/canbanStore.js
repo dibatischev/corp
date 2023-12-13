@@ -151,9 +151,30 @@ export const useCanbanStore = defineStore('canban', () => {
 
     ])
 
+    const statuses = ref([
+        {id:1,name:"статус 1"},
+        {id:2,name:"статус 2"},
+        {id:3,name:"статус 3"},
+        {id:4,name:"статус 4"}
+    ])
 
+    const companies = ref([
+        {id:1,name:'ООО Компания 1'},
+        {id:2,name:'ООО Компания 2'},
+        {id:3,name:'ООО Компания 3'},
+        {id:4,name:'ООО Компания 4'},
+        {id:5,name:'ООО Компания 5'},
+        {id:6,name:'ООО Компания 6'},
+        {id:7,name:'ООО Компания 7'}
+    ])
 
+    const payments = ref([
+        {id:1, name:'Наличные'},
+        {id:2, name:'Карта'},
+        {id:3, name:'Реквизиты'},
+        {id:4, name:'СБП'},
+    ])
     return {
-        data
+        data,statuses,companies,payments
     }
 })

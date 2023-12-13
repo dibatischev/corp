@@ -9,7 +9,8 @@
                 </svg>
             </div>
            <div class="midCont">
-            <FilterLeft></FilterLeft>
+            <FilterLeft style="width: 35%;"></FilterLeft>
+            <FilterRight style="width: 65%;">   </FilterRight>
            </div>
         </div>
     </CorpModal>
@@ -18,6 +19,7 @@
 <script setup>
 import FilterLeft from './FilterLeft.vue';
 import CorpModal from '../UI/CorpModal.vue';
+import FilterRight from './FilterRight.vue';
 
 </script>
 
@@ -27,7 +29,9 @@ import CorpModal from '../UI/CorpModal.vue';
     justify-content: space-between;
     border-bottom: 1px solid $accent-gray;
 }
-
+.midCont{
+    display: flex;
+}
 .blackTxt {
     margin-bottom: 16px;
 }</style>
