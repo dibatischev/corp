@@ -19,7 +19,9 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
+
         },
         {
             type: 1,
@@ -29,7 +31,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 1,
@@ -39,7 +42,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 2,
@@ -49,7 +53,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 2,
@@ -59,7 +64,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 2,
@@ -69,7 +75,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 3,
@@ -79,7 +86,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 3,
@@ -89,7 +97,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 3,
@@ -99,7 +108,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 4,
@@ -109,7 +119,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 4,
@@ -119,7 +130,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 4,
@@ -129,7 +141,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 5,
@@ -139,7 +152,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 1
+            OrderStatusType: 1,
+            ResponsibleManager:'Некоторый менеджер'
         },
         {
             type: 5,
@@ -149,7 +163,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderCompany: "ИП Полуянов П.П",
             OrderSummary: 51255,
             OrderStatus: "Нужна доплата",
-            OrderStatusType: 3
+            OrderStatusType: 3,
+            ResponsibleManager:'Некоторый менеджер'
         }
 
     ])
