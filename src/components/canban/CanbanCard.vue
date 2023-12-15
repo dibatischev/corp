@@ -29,7 +29,9 @@ const props = defineProps({
     OrderSummary: Number,
     OrderStatus: String,
     OrderStatusType: Number,
-    OrderDate: String
+    OrderDate: String,
+    OrderDetails: Object,
+    OrderItems:Array
 
 })
 

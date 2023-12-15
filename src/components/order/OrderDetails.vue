@@ -1,31 +1,10 @@
 <template>
-    <div class="orderDetailsCont">
-        <div class="detailsHead">
-            <div class="headLeftSide">
-                <div class="blackTxt"></div>
-            </div>
-            <div class="headRightSide"></div>
-        </div>
-        <div class="statusTags">
-
-        </div>
-        <div class="about">
-            <div class="aboutOrder">
-
-            </div>
-            <div class="aboutDelivery">
-
-            </div>
-            <div class="aboutMan">
-                
-            </div>
-        </div>
-        <div class="order">
-            <div class="orderHead"></div>
-            <div class="orderTable">
-
-            </div>
-        </div>
-    </div>
 
 </template>
+<script setup>
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>

@@ -1,10 +1,11 @@
 <script setup>
 import CanbanPage from "@/pages/CanbanPage.vue"
+import OrderDetails from "./components/order/OrderDetails.vue";
 </script>
 
 <template>
   
-    <CanbanPage></CanbanPage>
+    <OrderDetails/>
   
 </template>
 
