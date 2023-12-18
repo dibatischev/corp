@@ -17,8 +17,9 @@
             </CanbanColumn>
             
     </div>
+
     
-    <!-- <FilterModal ></FilterModal> -->
+   
 </template>
 
 <style lang="scss" scoped>
@@ -36,6 +37,7 @@ import FilterModal from '@/components/canban/FilterModal.vue';
 import StatusBar from '@/components/canban/StatusBar.vue';
 import CanbanColumn from '@/components/canban/CanbanColumn.vue';
 import { useCanbanStore } from '@/stores/canbanStore';
+import OrderDetails from '@/components/order/OrderDetails.vue';
 
 const caban = useCanbanStore()
 const getTypes = (type) => {

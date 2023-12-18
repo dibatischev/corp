@@ -8,7 +8,13 @@ const router = createRouter({
     {
       path: '/',
       name: 'home',
-      component: OrderDetails
+      component: CanbanPage
+    },
+    {
+      path: '/order/:id',
+      name: 'order',
+      component: OrderDetails,
+      props:{New:String}
     }
   ]
 })

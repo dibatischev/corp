@@ -19,17 +19,24 @@
 </template>
 
 <script setup>
-import {ref} from 'vue'
-import defineProps from 'vue'
+import { ref, defineProps } from 'vue'
+const props = defineProps({
+    title: String
+})
 </script>
 <style lang="scss" scoped>
 .AboutCardCont {
+    width: 503px;
+    height: 363px;
     padding: 16px;
+    border-radius: 12px;
+    border: 1px solid #000;
 
     &__head {
         display: flex;
         justify-content: space-between;
-        button{
+
+        button {
             background: none;
             border: none;
             outline: none;
@@ -37,6 +44,7 @@ import defineProps from 'vue'
     }
 
     &__fields {
+        margin-top: 20px;
         display: flex;
         flex-direction: column;
         gap: 24px;

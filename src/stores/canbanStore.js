@@ -90,8 +90,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderStatusType: 1,
             ResponsibleManager: 'Некоторый менеджер',
             OrderDetails: {
-                address: '', category: '', promocode: false, replace: { id: 1, title: '' }, person: '', datetime: '', comment: '', dogovor: { id: 1, number: '' }, contact:{
-                    id:1,name:'',phone:'',attorneystatus:true
+                address: 'адрес 4', category: 'ресторан', promocode: false, replace: { id: 1, title: 'Заменить и всё' }, person: 'Человек 7', datetime: 'Некая дата 3', comment: 'тут комментарий 4', dogovor: { id: 4, number: 'Договор 4' }, contact:{
+                    id:3,name:'человек 8',phone:'+79211111114',attorneystatus:true
                 }
             },
             OrderItems: [
@@ -113,8 +113,8 @@ export const useCanbanStore = defineStore('canban', () => {
             OrderStatusType: 1,
             ResponsibleManager: 'Некоторый менеджер',
             OrderDetails: {
-                address: '', category: '', promocode: false, replace: { id: 1, title: '' }, person: '', datetime: '', comment: '', dogovor: { id: 1, number: '' }, contact:{
-                    id:1,name:'',phone:'',attorneystatus:true
+                address: 'адрес 5', category: 'ресторан', promocode: false, replace: { id: 1, title: 'Заменить и всё' }, person: 'Человек 9', datetime: 'Некая дата 5', comment: 'тут комментарий 5', dogovor: { id: 5, number: 'Договор 5' }, contact:{
+                    id:3,name:'человек 6',phone:'+79211111113',attorneystatus:true
                 }
             },
             OrderItems: [
@@ -387,12 +387,13 @@ export const useCanbanStore = defineStore('canban', () => {
         }
     ])
 
-    const SelectedOrder=ref([])
+    const SelectedOrder=ref({})
+    
     function filterSelected(id){
         SelectedOrder.value = data.value.filter((i) => i.id === id)
-        console.log(SelectedOrder.value)
+        
     }
     return {
-        data, statuses, companies, payments, globalFilter, filters,filterSelected,SelectedOrder
+        data, statuses, companies, payments, globalFilter,filterSelected,filters,SelectedOrder
     }
 })
