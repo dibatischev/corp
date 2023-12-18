@@ -1,10 +1,12 @@
 <script setup>
+import router from "./router";
 import CanbanPage from "@/pages/CanbanPage.vue"
+import OrderDetails from "./components/order/OrderDetails.vue";
 </script>
 
 <template>
   
-    <CanbanPage></CanbanPage>
+    <RouterView />
   
 </template>
 

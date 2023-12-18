@@ -2,17 +2,31 @@
     <div class="CollumnWrapper">
         <CanbanCard v-for="i in tasks" v-bind:key="i.id" v-bind:OrderStatus="i.OrderStatus" v-bind:OrderNum="i.orderNum"
             v-bind:OrderCompany="i.OrderCompany" v-bind:OrderSummary="i.OrderSummary" v-bind:OrderDate="i.orderDate"
-            v-bind:OrderStatusType="i.OrderStatusType" draggable="true" @dragstart="startDrag($event,i)"></CanbanCard>
+            v-bind:OrderStatusType="i.OrderStatusType" v-bind:OrderDetails="i.OrderDetails" v-bind:OrderItems="i.OrderItems"  draggable="true" @dragstart="startDrag($event,i)" 
+            @click="toOrderDet(i.id)"></CanbanCard>
     </div>
 </template>
 <script setup>
-import { defineProps} from 'vue';
-import CanbanCard from './CanbanCard.vue';
 
+import { useRouter } from 'vue-router';
+import { ref,defineProps} from 'vue';
+import CanbanCard from './CanbanCard.vue';
+import { useCanbanStore } from '@/stores/canbanStore';
+
+const caban = useCanbanStore()
+const router = useRouter()
 const props = defineProps({
     tasks: Array
 })
-
+let bazar = ref()
+function toOrderDet(id){
+    caban.filterSelected(id)
+    bazar.value = caban.SelectedOrder
+    console.log(bazar)
+    router.push({name:'order',params:{id: id, new:"bazar"}})
+    
+    
+}
 function startDrag(evt,item){
     evt.dataTransfer.dropEffect = 'move'
     evt.dataTransfer.effectAllowed = 'move'
