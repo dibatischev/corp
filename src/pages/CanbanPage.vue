@@ -49,7 +49,6 @@ function onDrop(evt, type) {
     const itemID = evt.dataTransfer.getData('itemID');
     const item = caban.data.find((item) => item.id == itemID)
     item.type = type
-    console.log(actual.value)
 }
 
 </script>

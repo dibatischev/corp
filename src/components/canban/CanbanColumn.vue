@@ -18,11 +18,11 @@ const router = useRouter()
 const props = defineProps({
     tasks: Array
 })
-let bazar = ref()
+let bazar = ref({})
 function toOrderDet(id){
     caban.filterSelected(id)
     bazar.value = caban.SelectedOrder
-    console.log(bazar)
+    console.log(bazar.value)
     router.push({name:'order',params:{id: id, new:"bazar"}})
     
     
